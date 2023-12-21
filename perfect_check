@@ -1,7 +1,0 @@
-#!/bin/bash
-
-num=$1
-sum=0
-i=0
-
-while [ $sum -le $num ] 

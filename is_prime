@@ -1,0 +1,20 @@
+#!/bin/bash
+
+number=$1
+
+square_root=$(./square_root $number)
+#square_root=$(echo "sqrt($number)" | bc)
+
+count=2
+while [ $(($number%$count)) -ne 0 ] && [ $count -le $square_root ]
+do
+	count=$(($count+1))
+done
+
+
+
+if [ $(($number%$count)) -ne 0 ] || [ $number -eq 2 ] && [ $number -ne 1 ]; then
+	echo true
+else
+	echo false
+fi

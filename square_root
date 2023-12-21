@@ -1,0 +1,15 @@
+#!/bin/bash
+
+num=$1
+i=0
+result=0
+while [ $result -le $num ]; do
+	i=$(($i+1))
+	result=$(($i**2))
+done
+
+if [ $num = 1 ] || [ $num = 0 ]; then
+	echo $num
+else
+	echo $(($i-1))
+fi
